@@ -1,22 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from "react";
 
-interface AppProps {}
-
-const App = (props: AppProps) => {
-	const [data, setData] = useState('');
-
-	useEffect(() => {
-		fetch('http://localhost:3000/api/hello')
-			.then(res => res.json())
-			.then(data => setData(data.message))
-			.catch(e => console.log('[fetch erorr]', e));
-	}, []);
-
-	return (
-		<div className="mx-auto mt-5 w-25">
-			<div className="alert alert-info text-center">Hello {data}</div>
-		</div>
-	);
+const App = () => {
+    return (
+        <div className="dark:bg-yellow-600 bg-yellow-300">
+            <div className="text-4xl text-red-800">Hello!</div>
+        </div>
+    );
 };
 
 export default App;
